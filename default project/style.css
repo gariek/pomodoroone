@@ -1,0 +1,165 @@
+:root {
+  --bg-color: #1e1e1e;
+  --text-color: #f4f4f4;
+  --primary: #ff4e4e;
+  --hover: #e11d48;
+  --card-bg: #2e2e2e;
+}
+
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #1e1e1e;
+  --primary: #ff4e4e;
+  --hover: #c53030;
+  --card-bg: #f9f9f9;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  height: 100vh;
+  position: relative;
+}
+
+#toggleMode {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 700;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.controls-section {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.mode-buttons {
+  margin-bottom: 1.5rem;
+}
+
+.mode-buttons button {
+  margin: 0 0.3rem;
+  padding: 0.6rem 1.4rem;
+  font-size: 1.1rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.mode-buttons button.active,
+.mode-buttons button:hover {
+  background: var(--hover);
+}
+
+#timer {
+  font-size: 6rem;
+  font-weight: 700;
+  font-family: monospace;
+  margin: 1.5rem 0;
+  user-select: none;
+}
+
+.buttons button {
+  margin: 0 0.6rem;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.1rem;
+  color: white;
+  background: var(--primary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buttons button:hover {
+  background: var(--hover);
+}
+
+.data-section {
+  background: var(--card-bg);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.data-section h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--bg-color);
+  flex: 1 1 30%;
+  min-width: 140px;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  text-align: center;
+  user-select: none;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.card p {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}

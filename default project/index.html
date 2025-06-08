@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pomodoro Foco + Dados</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="toggleMode" title="Alternar modo">🌙</button>
+
+  <div class="container">
+    <header>
+      <h1>Pomodoro Foco</h1>
+    </header>
+
+    <main>
+      <section class="controls-section">
+        <div class="mode-buttons">
+          <button onclick="setMode('pomodoro')" id="btn-pomodoro" class="active">Pomodoro</button>
+          <button onclick="setMode('short')" id="btn-short">Descanso Curto</button>
+          <button onclick="setMode('long')" id="btn-long">Descanso Longo</button>
+        </div>
+
+        <div id="timer">25:00</div>
+
+        <div class="buttons">
+          <button onclick="startTimer()">Iniciar</button>
+          <button onclick="pauseTimer()">Pausar</button>
+          <button onclick="resetTimer()">Reiniciar</button>
+        </div>
+      </section>
+
+      <section class="data-section">
+        <h2>📊 Seus Dados</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Pomodoros concluídos</h3>
+            <p id="count">0</p>
+          </div>
+
+          <div class="card">
+            <h3>Tempo focado (min)</h3>
+            <p id="focusTime">0</p>
+          </div>
+
+          <div class="card">
+            <h3>Tempo de pausa (min)</h3>
+            <p id="pauseTime">0</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Feito com ❤️ por você</p>
+    </footer>
+  </div>
+
+  <audio id="alarm" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
